@@ -175,18 +175,7 @@ class _OnBoard extends HookConsumerWidget {
     return SafeArea(
       child: Column(
         children: <Widget>[
-          Container(
-            height: skipContainerHeight,
-            alignment: Alignment.centerRight,
-            child: skipButton ??
-                TextButton(
-                  onPressed: () => _onSkipPressed(onSkip),
-                  child: const Text(
-                    "Skip",
-                    style: TextStyle(color: Colors.blueAccent),
-                  ),
-                ),
-          ),
+          
           Expanded(
             child: SizedBox(
                 height: pageViewHeight,
@@ -267,6 +256,18 @@ class _OnBoard extends HookConsumerWidget {
                       ),
                     ),
             ),
+          ),
+          Container(
+            height: skipContainerHeight,
+            alignment: Alignment.centerRight,
+            child: skipButton ??
+                TextButton(
+                  onPressed: () => _onSkipPressed(onSkip),
+                  child: const Text(
+                    "Skip",
+                    style: TextStyle(color: Colors.blueAccent),
+                  ),
+                ),
           ),
         ],
       ),
