@@ -28,6 +28,7 @@ class PageIndicator extends StatelessWidget {
       width: pageIndicatorStyle!.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: _dots,
       ),
     );
@@ -42,7 +43,7 @@ class PageIndicator extends StatelessWidget {
             width: activeSize!.width,
             height: activeSize.height,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
+              shape: BoxShape.rectangle,
               color: pageIndicatorStyle!.activeColor,
             ),
           )
